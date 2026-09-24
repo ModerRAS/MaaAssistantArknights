@@ -48,6 +48,8 @@ public class TaskSettingVisibilityInfo : PropertyChangedBase
 
     public bool Mall { get => field; set => SetAndNotify(ref field, value); }
 
+    public bool StoreShopping { get => field; set => SetAndNotify(ref field, value); }
+
     public bool Award { get => field; set => SetAndNotify(ref field, value); }
 
     public bool OperProgress { get => field; set => SetAndNotify(ref field, value); }
@@ -156,6 +158,7 @@ public class TaskSettingVisibilityInfo : PropertyChangedBase
             InfrastTask => Infrast = enable,
             FightTask => Fight = enable,
             MallTask => Mall = enable,
+            StoreShoppingTask => StoreShopping = enable,
             AwardTask => Award = enable,
             OperProgressTask => OperProgress = enable,
             RoguelikeTask => Roguelike = enable,
@@ -186,7 +189,7 @@ public class TaskSettingVisibilityInfo : PropertyChangedBase
     private void UpdateAdvancedSettingsVisibility(BaseTask task)
     {
         AdvancedSettingsVisibility = task switch {
-            AwardTask or StartUpTask or UserDataUpdateTask or OperProgressTask => false,
+            AwardTask or StartUpTask or UserDataUpdateTask or OperProgressTask or StoreShoppingTask => false,
             ReclamationTask rt => rt.Theme == ReclamationTheme.Tales,
             _ => true,
         };
@@ -199,6 +202,7 @@ public class TaskSettingVisibilityInfo : PropertyChangedBase
         Infrast = false;
         Fight = false;
         Mall = false;
+        StoreShopping = false;
         Award = false;
         OperProgress = false;
         Roguelike = false;

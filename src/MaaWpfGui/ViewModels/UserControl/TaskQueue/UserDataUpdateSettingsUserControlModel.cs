@@ -15,7 +15,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using MaaWpfGui.Configuration.Factory;
@@ -99,8 +98,8 @@ public class UserDataUpdateSettingsUserControlModel : TaskSettingsViewModel, Use
                 return (null, []);
             }
 
-            bool operBoxTriggerDue = updateTask.UpdateOperBox && IsTriggerDue(Instances.ToolboxViewModel.LastOperBoxSyncTime, updateTask.TriggerInterval);
-            bool depotTriggerDue = updateTask.UpdateDepot && IsTriggerDue(Instances.ToolboxViewModel.LastDepotSyncTime, updateTask.TriggerInterval);
+            bool operBoxTriggerDue = updateTask.UpdateOperBox && Helper.TriggerInterval.IsDue(Instances.ToolboxViewModel.LastOperBoxSyncTime, updateTask.TriggerInterval);
+            bool depotTriggerDue = updateTask.UpdateDepot && Helper.TriggerInterval.IsDue(Instances.ToolboxViewModel.LastDepotSyncTime, updateTask.TriggerInterval);
 
             if (!operBoxTriggerDue && !depotTriggerDue)
             {
@@ -158,28 +157,6 @@ public class UserDataUpdateSettingsUserControlModel : TaskSettingsViewModel, Use
             }
 
             return ids.Count > 0 || operBoxSyncedWithoutTask ? (true, ids) : (null, []);
-        }
-
-        private static bool IsTriggerDue(DateTimeOffset? lastSyncTime, UserDataUpdateTriggerInterval triggerInterval)
-        {
-            if (triggerInterval == UserDataUpdateTriggerInterval.EveryTime)
-            {
-                return true;
-            }
-
-            if (!lastSyncTime.HasValue)
-            {
-                return true;
-            }
-
-            var now = DateTimeOffset.UtcNow.ToYjDateTime().Date;
-            var lastDate = lastSyncTime.Value.ToYjDateTime().Date;
-
-            return triggerInterval switch {
-                UserDataUpdateTriggerInterval.Daily => now > lastDate,
-                UserDataUpdateTriggerInterval.Weekly => ISOWeek.GetYear(now) != ISOWeek.GetYear(lastDate) || ISOWeek.GetWeekOfYear(now) != ISOWeek.GetWeekOfYear(lastDate),
-                _ => true,
-            };
         }
     }
 

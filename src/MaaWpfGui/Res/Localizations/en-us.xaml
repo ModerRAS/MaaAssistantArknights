@@ -950,6 +950,7 @@ If the game is launched in portrait mode and then switched to landscape, it may 
     <system:String x:Key="UserDataUpdate">Update Doctor Data</system:String>
     <system:String x:Key="DepotMaintain">Depot Maintain</system:String>
     <system:String x:Key="SwitchTheme">Switch Theme</system:String>
+    <system:String x:Key="StoreShopping">Store Shopping</system:String>
     <system:String x:Key="MiniGame">Useful Tasks</system:String>
     <system:String x:Key="MiniGameCategoryPermanent">Permanent Activities</system:String>
     <system:String x:Key="MiniGameCategoryCurrentEvent">Current Events</system:String>
@@ -1049,6 +1050,9 @@ Do not adjust the proxy multiplier setting in the game</system:String>
     <system:String x:Key="UserDataUpdateCannotModifyExistingTask">Cannot modify the parameters of an already added "{key=UserDataUpdate}" task</system:String>
     <system:String x:Key="UserDataUpdateNothingSelected">Neither ｢{key=OperBoxRecognition}｣ nor ｢{key=DepotRecognition}｣ is selected</system:String>
     <system:String x:Key="UserDataUpdateIntervalNotReached">The ｢{0}｣ trigger interval has not been reached since the last sync</system:String>
+    <system:String x:Key="StoreShoppingNothingSelected">Neither ｢{key=MiniGameNameGreenTicketStore}｣ nor ｢{key=MiniGameNameYellowTicketStore}｣ is selected</system:String>
+    <system:String x:Key="StoreShoppingIntervalNotReached">｢{0}｣ has not reached the ｢{1}｣ trigger interval since the last success</system:String>
+    <system:String x:Key="StoreShoppingLastSuccess">Last Success</system:String>
     <!--  DepotMaintain  -->
     <system:String x:Key="DepotUpdateBeforeStart">Update inventory before starting</system:String>
     <system:String x:Key="AddPlan">Add</system:String>
@@ -1853,6 +1857,7 @@ Right-click to clear inactive jobs</system:String>
     <system:String x:Key="EveryTime">Every Time</system:String>
     <system:String x:Key="Daily">Daily</system:String>
     <system:String x:Key="Weekly">Weekly</system:String>
+    <system:String x:Key="Monthly">Monthly</system:String>
     <system:String x:Key="UserDataUpdateTriggerInterval">Trigger Interval</system:String>
     <system:String x:Key="BattleFormation">Start formation</system:String>
     <system:String x:Key="BattleFormationParseFailed">Formation parse failed</system:String>

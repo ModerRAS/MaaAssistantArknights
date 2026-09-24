@@ -1670,6 +1670,11 @@ public class AsstProxy
             return taskChain is "OperBox" or "Depot" ? $" ({LocalizationHelper.GetString(taskChain)})" : string.Empty;
         }
 
+        if (task is StoreShoppingTask)
+        {
+            return StoreShoppingSettingsUserControlModel.GetLogSuffix(taskId);
+        }
+
         if (task is not DepotMaintainTask depot)
         {
             return string.Empty;
@@ -3417,6 +3422,9 @@ public class AsstProxy
         /// <summary>获取信用点/访问好友/信用商店</summary>
         Mall,
 
+        /// <summary>绿票商店、黄票商店</summary>
+        StoreShopping,
+
         /// <summary>领奖励/邮箱/幸运墙等</summary>
         Award,
 
@@ -3470,6 +3478,7 @@ public class AsstProxy
         TaskType.Infrast,
         TaskType.Recruit,
         TaskType.Mall,
+        TaskType.StoreShopping,
         TaskType.Award,
         TaskType.Roguelike,
         TaskType.Reclamation,

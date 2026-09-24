@@ -25,6 +25,7 @@ namespace MaaWpfGui.Configuration.Single.MaaTask;
 [JsonDerivedType(typeof(OperProgressTask), typeDiscriminator: nameof(OperProgressTask))]
 [JsonDerivedType(typeof(AwardTask), typeDiscriminator: nameof(AwardTask))]
 [JsonDerivedType(typeof(MallTask), typeDiscriminator: nameof(MallTask))]
+[JsonDerivedType(typeof(StoreShoppingTask), typeDiscriminator: nameof(StoreShoppingTask))]
 [JsonDerivedType(typeof(InfrastTask), typeDiscriminator: nameof(InfrastTask))]
 [JsonDerivedType(typeof(RecruitTask), typeDiscriminator: nameof(RecruitTask))]
 [JsonDerivedType(typeof(RoguelikeTask), typeDiscriminator: nameof(RoguelikeTask))]

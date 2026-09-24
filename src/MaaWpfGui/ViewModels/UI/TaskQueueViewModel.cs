@@ -113,6 +113,11 @@ public class TaskQueueViewModel : Screen
     public static MallSettingsUserControlModel MallTask => MallSettingsUserControlModel.Instance;
 
     /// <summary>
+    /// Gets 商店购物任务Model
+    /// </summary>
+    public static StoreShoppingSettingsUserControlModel StoreShoppingTask => StoreShoppingSettingsUserControlModel.Instance;
+
+    /// <summary>
     /// Gets 基建任务Model
     /// </summary>
     public static InfrastSettingsUserControlModel InfrastTask => InfrastSettingsUserControlModel.Instance;
@@ -1668,6 +1673,7 @@ public class TaskQueueViewModel : Screen
             new GenericCombinedData<Type> { Display = LocalizationHelper.GetString("Infrast"), Value = typeof(InfrastTask) },
             new GenericCombinedData<Type> { Display = LocalizationHelper.GetString("Recruit"), Value = typeof(RecruitTask) },
             new GenericCombinedData<Type> { Display = LocalizationHelper.GetString("Mall"), Value = typeof(MallTask) },
+            new GenericCombinedData<Type> { Display = LocalizationHelper.GetString("StoreShopping"), Value = typeof(StoreShoppingTask) },
             new GenericCombinedData<Type> { Display = LocalizationHelper.GetString("Award"), Value = typeof(AwardTask) },
             new GenericCombinedData<Type> { Display = LocalizationHelper.GetString("OperProgress"), Value = typeof(OperProgressTask) },
             new GenericCombinedData<Type> { Display = LocalizationHelper.GetString("Roguelike"), Value = typeof(RoguelikeTask) },
@@ -1688,6 +1694,7 @@ public class TaskQueueViewModel : Screen
                 nameof(InfrastTask) => LocalizationHelper.GetString("Infrast"),
                 nameof(RecruitTask) => LocalizationHelper.GetString("Recruit"),
                 nameof(MallTask) => LocalizationHelper.GetString("Mall"),
+                nameof(StoreShoppingTask) => LocalizationHelper.GetString("StoreShopping"),
                 nameof(AwardTask) => LocalizationHelper.GetString("Award"),
                 nameof(OperProgressTask) => LocalizationHelper.GetString("OperProgress"),
                 nameof(RoguelikeTask) => LocalizationHelper.GetString("Roguelike"),

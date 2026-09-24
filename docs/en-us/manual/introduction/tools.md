@@ -69,8 +69,8 @@ Built-in features include:
   - Hidden Front (supports selecting endings and event branches)
 - Permanent Features
   - Event shop exchange
-  - Green ticket shop exchange
-  - Yellow ticket shop exchange
+  - Green ticket shop exchange. It can also run on a schedule via [Store Shopping](./store-shopping.md).
+  - Yellow ticket shop exchange. It can also run on a schedule via [Store Shopping](./store-shopping.md).
   - Reclamation Algorithm shop exchange
   - Automatically Raise Potential
   - Missing Material Synthesis

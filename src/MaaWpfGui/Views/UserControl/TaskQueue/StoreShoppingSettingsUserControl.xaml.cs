@@ -1,4 +1,4 @@
-// <copyright file="UserDataUpdateTriggerInterval.cs" company="MaaAssistantArknights">
+// <copyright file="StoreShoppingSettingsUserControl.xaml.cs" company="MaaAssistantArknights">
 // Part of the MaaWpfGui project, maintained by the MaaAssistantArknights team (Maa Team)
 // Copyright (C) 2021-2025 MaaAssistantArknights Contributors
 //
@@ -11,16 +11,18 @@
 // but WITHOUT ANY WARRANTY
 // </copyright>
 
-namespace MaaWpfGui.Constants.Enums;
+namespace MaaWpfGui.Views.UserControl.TaskQueue;
 
-public enum UserDataUpdateTriggerInterval
+/// <summary>
+/// StoreShoppingSettingsUserControl.xaml 的交互逻辑
+/// </summary>
+public partial class StoreShoppingSettingsUserControl : System.Windows.Controls.UserControl
 {
-    EveryTime,
-    Daily,
-    Weekly,
-
     /// <summary>
-    /// 每个游戏月最多一次。游戏月按游戏日的年与月计算。
+    /// Initializes a new instance of the <see cref="StoreShoppingSettingsUserControl"/> class.
     /// </summary>
-    Monthly,
+    public StoreShoppingSettingsUserControl()
+    {
+        InitializeComponent();
+    }
 }

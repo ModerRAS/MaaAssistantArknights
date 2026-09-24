@@ -952,6 +952,7 @@ C:\leidian\LDPlayer9
     <system:String x:Key="UserDataUpdate">ユーザーデータ更新</system:String>
     <system:String x:Key="DepotMaintain">在庫維持</system:String>
     <system:String x:Key="SwitchTheme">テーマ変更</system:String>
+    <system:String x:Key="StoreShopping">商店購入</system:String>
     <system:String x:Key="MiniGame">便利機能</system:String>
     <system:String x:Key="MiniGameCategoryPermanent">常設イベント</system:String>
     <system:String x:Key="MiniGameCategoryCurrentEvent">現在のイベント</system:String>
@@ -1051,6 +1052,9 @@ C:\leidian\LDPlayer9
     <system:String x:Key="UserDataUpdateCannotModifyExistingTask">追加済みの ｢{key=UserDataUpdate}｣ タスクのパラメータは変更できません</system:String>
     <system:String x:Key="UserDataUpdateNothingSelected">｢{key=OperBoxRecognition}｣ と ｢{key=DepotRecognition}｣ のどちらも選択されていません</system:String>
     <system:String x:Key="UserDataUpdateIntervalNotReached">前回の同期から ｢{0}｣ の実行間隔に達していません</system:String>
+    <system:String x:Key="StoreShoppingNothingSelected">｢{key=MiniGameNameGreenTicketStore}｣ と ｢{key=MiniGameNameYellowTicketStore}｣ のどちらも選択されていません</system:String>
+    <system:String x:Key="StoreShoppingIntervalNotReached">｢{0}｣ は前回の成功から ｢{1}｣ の実行間隔に達していません</system:String>
+    <system:String x:Key="StoreShoppingLastSuccess">前回成功</system:String>
     <!--  在庫維持  -->
     <system:String x:Key="DepotUpdateBeforeStart">タスク開始前に在庫データを更新</system:String>
     <system:String x:Key="AddPlan">追加</system:String>
@@ -1856,6 +1860,7 @@ C:\leidian\LDPlayer9
     <system:String x:Key="EveryTime">毎回</system:String>
     <system:String x:Key="Daily">毎日</system:String>
     <system:String x:Key="Weekly">毎週</system:String>
+    <system:String x:Key="Monthly">毎月</system:String>
     <system:String x:Key="UserDataUpdateTriggerInterval">実行間隔</system:String>
     <system:String x:Key="BattleFormation">編成開始</system:String>
     <system:String x:Key="BattleFormationParseFailed">フォーメーション解析に失敗しました</system:String>
